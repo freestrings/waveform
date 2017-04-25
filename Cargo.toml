@@ -1,0 +1,10 @@
+[package]
+name = "waveform"
+version = "0.1.0"
+authors = ["freestrings <freestrings@gmail.com>"]
+
+[dependencies]
+clap = "2"
+image = "0.12.0"
+imageproc = "0.7.0"
+simplemad = "0.8.1"
