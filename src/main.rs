@@ -68,7 +68,6 @@ fn build_output_dir(output: &str) {
 
 fn target_path(output: &str, path: &str) -> String {
     if output.is_empty() {
-        // create in the same directory of the path
         return format!("{}.png", path);
     }
 
@@ -116,17 +115,9 @@ fn main() {
 
     let image_width = value_t!(matches.value_of("width"), u32).unwrap_or(512 as u32);
     let image_height = value_t!(matches.value_of("height"), u32).unwrap_or(120 as u32);
-    //
-    // the color of canvas
-    //
     let background = hexcolor_to_rgb(matches.value_of("background").unwrap_or("#000000"));
-    //
-    // the color of wave
-    //
     let foreground = hexcolor_to_rgb(matches.value_of("foreground").unwrap_or("#ffffff"));
-    //
-    // the output path
-    //
+    
     let output = matches.value_of("output").unwrap_or("");
     build_output_dir(output);
 
